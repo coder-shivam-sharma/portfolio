@@ -1,0 +1,121 @@
+
+#Experience {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #121212; /* Optional dark background */
+    color: white;
+    overflow: hidden;
+}
+
+#Experience p{
+    font-size: 3.5vmax;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(255, 0, 191), white);
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading h1 {
+    text-align: left;
+    font-size: 36px;
+    background: linear-gradient(to right, rgb(95, 6, 65), white);
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.leftexperience {
+    flex: 1;
+    min-width: 300px;
+}
+
+.leftexperience ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    line-height: 1.8;
+}
+
+.leftexperience span {
+    color: aqua;
+    font-weight: bold;
+}
+
+.rightexperience {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.rightexperience img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Makes sure the image covers the container without distortion */
+    border-radius: 10px; /* Adds smooth rounded corners to match the card style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds depth with a shadow */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
+    transform: translateY(100%);
+    
+}
+
+.rightexperience img:hover {
+   
+    transform: scale(1.05); /* Zoom-in effect when hovered over */
+    
+}
+.rightexperience:hover img{
+    transform: translateY(0%);
+    transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .experience-content {
+        flex-direction: column;
+    }
+
+    .leftexperience,
+    .rightexperience {
+        width: 90%;
+        height: auto;
+        text-align: left;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.overlay.visible {
+    display: block;
+}

@@ -1,0 +1,108 @@
+#Home {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row; /* Default for large screens */
+      background-color: #121212; /* Optional: Add a contrasting background */
+      overflow: hidden;
+  }
+  
+  .lefthome {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+  }
+  
+  .homedetails {
+      font-size: 4vmax;
+      text-align: left;
+  }
+  
+  .line1 {
+      font-size: 0.4em;
+  }
+  
+  .line2 {
+      font-size: 1.2em;
+      background: linear-gradient(to right, rgb(0, 183, 255), white);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+  
+  .line3 {
+      font-size: 0.6em;
+  }
+  
+  .homedetails button {
+      padding: 10px 30px;
+      background-color: rgb(0, 183, 255);
+      color: black;
+      border: 2px solid rgb(0, 183, 255);
+      margin-top: 30px;
+      border-radius: 20px;
+      font-size: 22px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+  }
+  
+  .homedetails button:hover {
+      background-color: transparent;
+      color: rgb(0, 183, 255);
+      transform: scale(1.05); /* Add hover animation */
+  }
+  
+  .homedetails button:focus {
+      outline: 0.5px dashed rgb(0, 183, 255);
+      outline-offset: 5px;
+  }
+  
+  /* Right Section */
+ .righthome {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .righthome img {
+      width: 60%;
+      filter: drop-shadow(2px 2px 20px rgb(75, 139, 134));
+      transition: transform 0.3s ease;
+  }
+  
+  .righthome img:hover {
+      transform: scale(1.05); /* Add a subtle zoom on hover */
+  }
+   
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      #Home {
+          flex-direction: column-reverse;
+      }
+  
+      .lefthome, .righthome {
+          width: 100%;
+          height: 50vh;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .righthome {
+            width: 100%;
+            height: 50vh;
+            align-items: end;
+            justify-content: center;
+        }
+  
+      .righthome img {
+          width: 70%; /* Adjust size for smaller screens */
+          align-items: end;
+      }
+  }
+  

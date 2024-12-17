@@ -1,0 +1,161 @@
+ /* General Nav Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#121212;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+    padding: 10px 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    
+  }
+  
+  nav h1 {
+    margin: 0;
+    margin-left: 2%; 
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(0, 183, 255), white);
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Desktop Menu */
+  .desktop_menu {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    margin-right: 2%;
+  }
+  
+  .desktop_menu li {
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .desktop_menu li:hover {
+    cursor: pointer;
+    color: rgb(76, 231, 231);
+  }
+  
+  .Active {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger .ham {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Mobile Menu */
+  .mobile_menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mobile_menu li {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    list-style-type: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    
+  }
+  
+  .mobile_menu li:hover {
+    color: rgb(76, 231, 231);
+    cursor: pointer;
+  }
+  
+  .mobile_menu.activemobile {
+    display: flex;
+  }
+  
+  /* Responsive Breakpoint */
+  @media (max-width: 768px) {
+    .desktop_menu {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+      
+    }
+  }
+  
+
+
+
+
+  /* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 24px;
+  }
+  
+  .hamburger .ham {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hamburger Active State (Cross) */
+  .hamburger.active .ham:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  .hamburger.active .ham:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+  }
+  
+  .hamburger.active .ham:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  /* Show Hamburger Icon on Small Screens */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .desktop_menu {
+      display: none;
+    }
+  }
+  

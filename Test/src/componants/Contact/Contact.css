@@ -1,0 +1,134 @@
+ #Contact {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #121212; /* Optional dark background */
+  color: white;
+  padding: 20px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Left Contact Section */
+.leftcontact {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.leftcontact img {
+  width: 80%;
+  max-width: 400px;
+  filter: drop-shadow(2px 2px 20px rgb(75, 139, 134));
+  transition: transform 0.3s ease;
+}
+
+.leftcontact img:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Right Contact Section */
+.rightcontact {
+    width: 60%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  background-color: #202124; /* Dark background for the form */
+  box-shadow: 2px 2px 10px black, 2px 2px 20px black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  margin-top: 0%;
+}
+
+form:hover {
+  box-shadow: 2px 2px 10px aqua, 2px 2px 20px aqua;
+}
+
+form label {
+  font-size:14px;
+  font-weight: bold;
+  color: aqua;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 2px solid aqua;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2a2a2a;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+
+form input:focus,
+form textarea:focus {
+  border-color: #00ffff;
+}
+
+#textarea {
+  height: 200px;
+  resize: none; /* Disable resizing */
+}
+
+#btn {
+  width: 120px;
+  height: 50px;
+  padding: 0px;
+  border: none;
+  border-radius: 10px;
+  background-color: aqua;
+  color: #121212;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: transparent;
+  color: aqua;
+  border: 2px solid aqua;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Contact {
+    flex-direction: column;
+  }
+
+  .leftcontact,
+  .rightcontact {
+    width: 100%;
+    padding: 20px;
+    height: auto; /* Ensure no fixed height on smaller screens */
+  }
+
+  .leftcontact img {
+    width: 80%; /* Reduce the image size */
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto; /* Center the form */
+  }
+}
